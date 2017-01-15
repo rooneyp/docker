@@ -1,0 +1,16 @@
+mycouchbase:
+  image: couchbase/server
+  container_name: couchbase
+  volumes:
+    - ./vols/var:/opt/couchbase/var
+  ports:
+    - 8091:8091
+    - 8092:8092 
+    - 8093:8093 
+    - 11210:11210
+  environment:
+    - TERM=xterm
+#    - https_proxy=http://10.193.2.71:80
+#    - http_proxy=http://10.193.2.71:80
+#    - no_proxy=.bloombergpolarlake.com
+
